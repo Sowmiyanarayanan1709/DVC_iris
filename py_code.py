@@ -15,7 +15,7 @@ y = df['Species']
 
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3, random_state=7)
 
-model_rf = RandomForestClassifier(ccp_alpha=0.5, min_samples_split=10)
+model_rf = RandomForestClassifier()
 model_rf.fit(X_train,y_train)
 
 filename = 'Random_Forest_model'
@@ -36,7 +36,7 @@ df_rf["Accuracy"]  = accuracy
 df_rf.insert(0,'model_name','Random Forest_'+str(git_count))
 df_rf.to_csv("C:\\Users\\s123\\Desktop\\Iris_classification\\parameters.csv",mode = 'a', index=False, header = False)
 
-model_dt = DecisionTreeClassifier(ccp_alpha=0.5, min_samples_split=10)
+model_dt = DecisionTreeClassifier()
 model_dt.fit(X_train,y_train)
 
 filename='Decision_Tree_model'
