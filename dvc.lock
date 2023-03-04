@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python py_code.py
+    deps:
+    - path: Iris.csv
+      md5: ca06729ff39d96642d59b768e50be773
+      size: 4707
+    - path: py_code.py
+      md5: 0f58ddda7b60e5a8a7c95f3168a2b28b
+      size: 1834
+    outs:
+    - path: Decision_Tree_model
+      md5: 8e6c6dc77a356753f56303701d529a93
+      size: 1262
+    - path: Random_Forest_model
+      md5: 402beb2a01b37fbce4eb2db7835427ce
+      size: 39673
